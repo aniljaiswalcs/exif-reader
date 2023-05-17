@@ -1,0 +1,14 @@
+<h1>{{.PageTitle}}</h1>
+<ul>
+    {{range .Exifdata}}
+    <hr />
+    <dl>
+        <dt>Filepath: </dt>  <dd>{{.FilePath}}</dd>
+        {{if .Latitude}}
+            <dt>Latitude:</dt>	<dd>{{.Latitude}} </dd>
+            <dt>Longitude:</dt>	<dd>{{.Longitude}} </dd>
+        {{end}}
+        <dt>Comment:</dt>   <dd>{{.Comment}}</dd>
+    </dl>	
+    {{end}}
+</ul>
